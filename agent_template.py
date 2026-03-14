@@ -9,10 +9,9 @@ Observation: numpy array shape (18,), values are 0/1.
 
 from typing import Sequence
 
-import numpy as np
+import numpy as np 
 
 ACTIONS: Sequence[str] = ("L45", "L22", "FW", "R22", "R45")
-
 
 def policy(obs: np.ndarray, rng: np.random.Generator) -> str:
     """Return one action for the current observation."""
