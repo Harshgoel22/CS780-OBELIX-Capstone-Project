@@ -89,6 +89,13 @@ Difficulty knobs:
 
 This appends a row to `leaderboard.csv`.
 
+### Model Weights
+
+You can download all trained model weights from Kaggle:
+
+🔗 https://www.kaggle.com/datasets/harshgoel2003/cs780-obelix-model-weights
+
+
 ## References
 
 - [Automatic Programming of Behaviour-based Robots using Reinforcement Learning](https://cdn.aaai.org/AAAI/1991/AAAI91-120.pdf)

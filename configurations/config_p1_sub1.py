@@ -25,5 +25,8 @@ config = {
         ("linear", {'s': 15, 'e': 149, 'ival': 1.0, 'fval': 0.645}),
         ("exponential", {'s': 155, 'e': 255, 'ival': 0.645, 'fval': 0.02})
     ],
-    'device': device
+    'device': device,
+    'hDim': [64, 64],
+    'loss_fn': 'MSE',
+    'model_path': '../model_weights_phase1_sub1',
 }

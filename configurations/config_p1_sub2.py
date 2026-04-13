@@ -12,19 +12,22 @@ config = {
     'bufferSize': 100000,
     'batchSize': 64,
     'optimizerFn': torch.optim.Adam,
-    'optimizerLR': 0.0022,
-    'MAX_TRAIN_EPISODES': 300,
+    'optimizerLR': 0.01,
+    'MAX_TRAIN_EPISODES': 150,
     'MAX_EVAL_EPISODES': 1,
     'updateFrequency': 5,
     'explorationStrategyTrainFn': selectEpsilonGreedyAction,
     'explorationStrategyEvalFn': selectGreedyAction,
-    'max_steps': 500,
+    'max_steps': 1000,
     'epochs': 20,
     'epsilon': 0.58,
     'eps_decay_strategy': [
-        ("linear", {'s': 15, 'e': 149, 'ival': 1.0, 'fval': 0.645}),
-        ("exponential", {'s': 155, 'e': 255, 'ival': 0.645, 'fval': 0.02})
+        ("linear", {'s': 5, 'e': 85, 'ival': 1.0, 'fval': 0.499}),
+        ("exponential", {'s': 90, 'e': 150, 'ival': 0.499, 'fval': 0.05})
     ],
     'device': device,
-    'delta': 0.95
+    'delta': 0.99,
+    'hDim': [64,32],
+    'model_path': '../model_weights_phase1_sub2',
+    'loss_fn': 'HuberLoss'
 }

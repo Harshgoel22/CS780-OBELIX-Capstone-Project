@@ -132,10 +132,9 @@ class ReplayBuffer():
             experiencesList = [self.buffer[idx] for idx in indices]
 
             N = self.length()
-            updatedBeta = min(1.0, self.beta + self.beta_rate * kwargs['current_step'])
+            updatedBeta = min(1.0, self.beta + self.beta_rate * kwargs['running_step'])
             weights = (N * probs[indices]) ** (updatedBeta)
 
-            self.current_step += 1
             # normalizing the weights for stability
             weights /= weights.max()
             return experiencesList, indices, weights
